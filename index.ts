@@ -4,6 +4,7 @@ import "./style.css";
 class TeamMember {
   name = "";
   title = "";
+  imageSrc = '';
   bio: string[] = [];
   funFacts: string[] = [];
 
@@ -13,6 +14,7 @@ class TeamMember {
       <div class="card">
         <div class="card-face card-front">
           <span class="name">${this.name}</span>
+          ${this.renderImage()}
         </div>
         <div class="card-face card-back">
           <span class="name">${this.name}</span>
@@ -24,16 +26,20 @@ class TeamMember {
     `;
   }
 
-  renderBio() {
+  renderBio(): string {
     return this.bio.reduce((acc, x) => {
       return `${acc}<p class="list-item">${x}</p>`;
     }, "");
   }
 
-  renderFunFacts() {
+  renderFunFacts(): string {
     return this.funFacts.reduce((acc, x) => {
       return `${acc}<p class="list-item">${x}</p>`;
     }, "");
+  }
+
+  renderImage(): string {
+    return this.imageSrc ? `<img src="${this.imageSrc}">` : '';
   }
 }
 
@@ -46,7 +52,7 @@ function renderTeam(team: TeamMember[]) {
 const teamMembers: TeamMember[] = [
   Object.assign(new TeamMember(), {
     name: "Holly Brzycki",
-
+    imageSrc: 'assets/Holly Brzycki.jpg',
     bio: [
       "Holly Brzycki is the Supervisor of Online Learning at the Capital Area Intermediate Unit. She oversees the CAOLA, a regional online learning program for 123 schools, districts, programs & Intermediate Units in PA. Holly has been in education for over 23 years in the roles of teacher, curriculum director, principal and supervisor in traditional and cyber schools. Holly has spent the past 16 years dedicated to online learning and merging her passion for education and technology. She holds a teaching degree as well as a Masters of Education in Ed. Leadership and Principal certification."
     ],
