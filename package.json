@@ -1,6 +1,12 @@
 {
-  "name": "typescript",
+  "name": "about-us",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "st": "^1.2.2",
+    "style.css": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  }
 }

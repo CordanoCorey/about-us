@@ -1,5 +1,5 @@
 // Import stylesheets
-import "./style.css";
+import './style.css';
 
 class TeamMember {
   name = "";
@@ -10,19 +10,20 @@ class TeamMember {
 
   render() {
     return `
+    <div class="spacer2"></div>
     <div class="team-member scene">
       <div class="card">
         <div class="card-face card-front">
-          <span class="name">${this.name}</span>
           ${this.renderImage()}
+           <span class="name"> - ${this.name} - <br> ${this.title}</span>
         </div>
         <div class="card-face card-back">
-          <span class="name">${this.name}</span>
           <div class="bio">${this.renderBio()}</div>
           <div class="fun-facts">${this.renderFunFacts()}</div>
         </div>
       </div>
     </div>
+    <div class="spacer"></div>
     `;
   }
 
@@ -52,7 +53,8 @@ function renderTeam(team: TeamMember[]) {
 const teamMembers: TeamMember[] = [
   Object.assign(new TeamMember(), {
     name: "Holly Brzycki",
-    imageSrc: 'assets/Holly Brzycki.jpg',
+    title: "Supervisor of Online Learning",
+    imageSrc: './assets/Holly Brzycki.jpg',
     bio: [
       "Holly Brzycki is the Supervisor of Online Learning at the Capital Area Intermediate Unit. She oversees the CAOLA, a regional online learning program for 123 schools, districts, programs & Intermediate Units in PA. Holly has been in education for over 23 years in the roles of teacher, curriculum director, principal and supervisor in traditional and cyber schools. Holly has spent the past 16 years dedicated to online learning and merging her passion for education and technology. She holds a teaching degree as well as a Masters of Education in Ed. Leadership and Principal certification."
     ],
@@ -62,11 +64,14 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Dave Nichols",
+    imageSrc: './assets/Dave Nichols.jpg',
     bio: [],
     funFacts: []
   }),
   Object.assign(new TeamMember(), {
     name: "Aaron Clarke",
+    title: "Online Learning Account Manager",
+    imageSrc: './assets/Aaron Clarke.jpg',
     bio: [
       "Aaron Clarke is the Online Learning Account Manager for the CAOLA Program. In this role, Aaron works with IU and School District partners to support and grow their respective online learning programs through the use of CAOLA."
     ],
@@ -76,6 +81,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Aaron Sica",
+    title: "Application Support Specialist",
+    imageSrc: './assets/Aaron Sica.jpg',
     bio: [
       "Aaron Sica is an Application Support Specialist and has worked with the CAOLA program for the last 5 years, providing technical help to districts all over Pennsylvania who have enrolled in the program. He received a Bachelor’s Degree in Data Communications and Networking from Pennsylvania College of Technology."
     ],
@@ -85,6 +92,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Adam Shank",
+    title: "Application Support Specialist",
+    imageSrc: './assets/Adam Shank.jpg',
     bio: [
       "Adam Shank is an Application Support Specialist for the CAOLA Helpdesk.  Adam assists students and school representatives with course questions within the CAOLA platform, as well as prepares and manages CAOLA student issued laptops and devices."
     ],
@@ -92,6 +101,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Andrew Rhoads",
+    title: "Application Support Specialist",
+    imageSrc: './assets/Andrew Rhoads.jpg',
     bio: [
       "Andrew Rhoads is an Application Support Specialist for the CAOLA helpdesk. Andrew works with students and district personnel to assist with any issues or questions they may have when using the CAOLA platform."
     ],
@@ -99,6 +110,7 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Beth Cappello",
+    imageSrc: './assets/Elizabeth Cappello.jpg',
     bio: [
       "Beth Cappello is the cyber advisor for Big Spring School District. In this role, she advises students to navigate through their courses and offers support to families to help the student be academically successful. She received her undergraduate degree in Middle Grades Mathematics from West Chester University and will complete her Special Education Masters degree from Shippensburg University Spring 2020!"
     ],
@@ -108,6 +120,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Bryan Guerrisi",
+    title: " Online Support Administrator",
+    imageSrc: './assets/Bryan Guerrisi.jpg',
     bio: [
       "Bryan Guerrisi is the Online Support Administrator for the Capital Area Online Learning Association at the Capital Area Intermediate Unit. He is in charge of the professional development of CAOLA members as it pertains to vendors and the learning management systems used by the CAOLA consortium.",
       "Bryan has a Bachelor’s degree from Lock Haven University and a Master’s degree from Penn State University. "
@@ -116,6 +130,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Casey Stepp",
+    title: "Program Secretary for Online Learning",
+    imageSrc: './assets/Casey Stepp.jpg',
     bio: [
       "Casey Stepp is the Program Secretary for Online Learning at the Capital Area Intermediate Unit. She supports CAOLA by keeping the line of communication open between the CAIU Staff and districts/IUs, Schedule/organize meetings, prepares invoicing and provides administrative support for CAOLA staff."
     ],
@@ -125,6 +141,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Keisha Cree",
+    title: "Program Assistant",
+    imageSrc: './assets/Keisha Cree.jpg',
     bio: [
       "Keisha Cree is a Program Assistant for the CAOLA program. Her role involves advising school districts and students to navigate through their courses and offer support to be successful. Prior to CAOLA, she worked with children with developmental delays and before that was a Pre-K teacher. She is very invested in the educational success of students of all ages."
     ],
@@ -134,6 +152,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Kristen Gross",
+    title: "Online Learning Support Administrator",
+    imageSrc: './assets/Kristen Gross.jpg',
     bio: [
       "Kristen Gross is the Online Learning Support Administrator for the CAOLA program at the Capital Area Intermediate Unit. She supports CAOLA by maintaining the course catalog and monitoring students as an advisor for school districts in our program. Kristen received her undergraduate degree in Elementary and Special Education from Lebanon Valley College."
     ],
@@ -143,6 +163,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Matthew Brightbill",
+    title: "Application Support Specialist",
+    imageSrc: './assets/Matt Brightbill.jpg',
     bio: [
       "Matthew Brightbill is one of the application support specialists for the CAOLA Program. In this role, Matt supports IU’s and school districts with any technical related concerns that students or district personnel may have while using the CAOLA platform."
     ],
@@ -152,6 +174,8 @@ const teamMembers: TeamMember[] = [
   }),
   Object.assign(new TeamMember(), {
     name: "Tammy True",
+    title: "Program Assistant",
+    imageSrc: './assets/Tammy True.jpg',
     bio: [
       "Tammy True is a Program Assistant with Capital Area Intermediate Unit (CAIU) providing assistance with management and oversight of the Capital Area Online Learning Association’s (CAOLA) Online Learning Program. She provides advising services assisting member districts and students in the Program.",
       "Tammy worked for PADEP for 13 years, was a Realtor with Jack Gaughen ERA and worked on the CAIU Student Services Team for 10 years prior to joining the CAOLA Team."
@@ -162,21 +186,26 @@ const teamMembers: TeamMember[] = [
   })
 ];
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById("app");
-appDiv.innerHTML = `<div id="team">${renderTeam(teamMembers)}</div>`;
+window.onload = init;
 
-const cards = document.getElementsByClassName("card");
-Array.from(cards).forEach(card => {
-  card.addEventListener("mouseenter", function() {
-    card.classList.add("flipped");
+function init() {
+
+  const appDiv: HTMLElement = document.getElementById('app');
+  console.dir(appDiv);
+  appDiv.innerHTML = `<div id="team">${renderTeam(teamMembers)}</div>`;
+
+  const cards = document.getElementsByClassName("card");
+  Array.from(cards).forEach(card => {
+    card.addEventListener("mouseenter", function () {
+      card.classList.add("flipped");
+    });
+    card.addEventListener("mouseleave", function () {
+      setTimeout(() => {
+        card.classList.remove("flipped");
+      }, 300);
+    });
+    card.addEventListener("click", function () {
+      card.classList.toggle("flipped");
+    });
   });
-  card.addEventListener("mouseleave", function() {
-    setTimeout(() => {
-      card.classList.remove("flipped");
-    }, 100);
-  });
-  card.addEventListener("click", function() {
-    card.classList.toggle("flipped");
-  });
-});
+}
