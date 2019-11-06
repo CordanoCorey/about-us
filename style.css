@@ -5,34 +5,31 @@ h1, h2 {
 #team {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-member {
-  margin: 70px auto;
-  height: 470px;
+  display: flex;
+  height: 350px;
   flex-basis: 25%;
-}
-
-.spacer {
-  width: 5%;
-  margin: auto;
+  align-items: flex-start;
+  margin: 50px 70px;
 }
 
 .spacer2 {
-  width: 4%;
-  margin: auto;
-}
-
-.name{
-  font-size: 28px;
-  margin: 10px auto;
-  background: #632c006e;
-  width: 100%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(#000000e3,#ffffff);
+  margin: auto 20px;
   color: #ffffff;
-  line-height: 1.3;
-  letter-spacing: 1.2px;
+  font-size: 18px;
+  line-height: 2.5;
   border-radius: 15px;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  padding: 0 10px;
 }
 
 .bio {
@@ -41,12 +38,12 @@ h1, h2 {
   text-align: center;
   margin: 15px 0 0 0;
   font-family: Lato;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .fun-facts {
   display: flex;
-  font-size: 24px;
+  font-size: 18px;
   width: 100%;
   height: 50%;
   background: #632c006e;
@@ -54,6 +51,7 @@ h1, h2 {
   border-radius: 15px;
   align-items: center;
   justify-content: center;
+  line-height: 1.5;
 }
 
 .scene {
@@ -61,39 +59,37 @@ h1, h2 {
 }
 
 .card {
-  box-shadow: 0 19px 38px #0000004d, 0 0 12px #00000038;
   height: 100%;
   cursor: pointer;
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
-  border-radius: 15px;
+  width: 75%;
 }
 
 .card.flipped {
-  transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(180deg);
 }
 
 .card-face {
   position: absolute;
-  width: 100%;
-  height: 100%;
   text-align: center;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 .card-front img {
-  height: 100%;
   width: 100%;
   border-radius: 15px;
+  align-self: center;
+  box-shadow: 0 19px 38px #0000004d, 0 19px 12px #00000038;
 }
 
 .card-back {
-  transform: rotateY(180deg);
-  background: #9e9e9e6b !important;
+  transform: rotateY(-180deg);
+  background: #9e9e9e !important;
   border-radius: 15px;
+  width: 455px;
 }

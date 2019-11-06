@@ -10,12 +10,14 @@ class TeamMember {
 
   render() {
     return `
-    <div class="spacer2"></div>
     <div class="team-member scene">
+        <div class="spacer2">
+     - ${this.name} - <br> ${this.title}
+    </div>
       <div class="card">
         <div class="card-face card-front">
           ${this.renderImage()}
-           <span class="name"> - ${this.name} - <br> ${this.title}</span>
+           
         </div>
         <div class="card-face card-back">
           <div class="bio">${this.renderBio()}</div>
@@ -23,7 +25,6 @@ class TeamMember {
         </div>
       </div>
     </div>
-    <div class="spacer"></div>
     `;
   }
 
