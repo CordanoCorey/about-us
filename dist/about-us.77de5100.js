@@ -210,7 +210,7 @@ function () {
   }
 
   TeamMember.prototype.render = function () {
-    return "\n    <div class=\"team-member scene\">\n      <div class=\"spacer2\">\n        <span class=\"name\">" + this.name + "</span> \n        <span class=\"title\">" + this.title + "</span>\n      </div>\n      <div class=\"card\">\n        <div class=\"card-face card-front\">\n          " + this.renderImage() + "\n        </div>\n        <div class=\"card-face card-back\">\n          <div class=\"bio\">" + this.renderBio() + "</div>\n          <div class=\"fun-facts\">" + this.renderFunFacts() + "</div>\n        </div>\n      </div>\n    </div>\n    ";
+    return "\n    <div class=\"team-member scene\">\n      <div class=\"spacer2\">\n        <span class=\"name\">" + this.name + "</span> \n        <span class=\"title\">" + this.title + "</span>\n      </div>\n      <div class=\"card\">\n        <div class=\"card-face card-front\">\n          " + this.renderImage() + "\n        </div>\n        <div class=\"card-face card-back\">\n          <div class=\"bio\">" + this.renderBio() + "</div>\n          <div class=\"fun-facts\">" + this.renderFunFacts() + "\n          <span class=\"hashtag-funfacts\">#funfact</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ";
   };
 
   TeamMember.prototype.renderBio = function () {
@@ -322,7 +322,7 @@ window.onload = init;
 function init() {
   var appDiv = document.getElementById('our-team');
   appDiv.innerHTML = "<div id=\"team\">" + renderTeam(teamMembers) + "</div>";
-  var cards = document.getElementsByClassName('card');
+  var cards = document.getElementsByClassName('team-member');
   Array.from(cards).forEach(function (card) {
     card.addEventListener('mouseenter', function (e) {
       toBack(card);
@@ -339,7 +339,8 @@ function init() {
   });
 }
 
-function toBack(card) {
+function toBack(e) {
+  var card = e.children[1];
   card.classList.add('flipped');
   card.classList.add('flipping');
   setTimeout(function () {
@@ -347,7 +348,8 @@ function toBack(card) {
   }, 800);
 }
 
-function toFront(card) {
+function toFront(e) {
+  var card = e.children[1];
   var timer = setInterval(function () {
     if (!card.classList.contains('flipping')) {
       card.classList.remove('flipped');
@@ -383,7 +385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60501" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55504" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

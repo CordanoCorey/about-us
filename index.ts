@@ -21,7 +21,9 @@ class TeamMember {
         </div>
         <div class="card-face card-back">
           <div class="bio">${this.renderBio()}</div>
-          <div class="fun-facts">${this.renderFunFacts()}</div>
+          <div class="fun-facts">${this.renderFunFacts()}
+          <span class="hashtag-funfacts">#funfact</span>
+          </div>
         </div>
       </div>
     </div>
@@ -183,7 +185,7 @@ function init() {
   const appDiv: HTMLElement = document.getElementById('our-team');
   appDiv.innerHTML = `<div id="team">${renderTeam(teamMembers)}</div>`;
 
-  const cards = document.getElementsByClassName('card');
+  const cards = document.getElementsByClassName('team-member');
   Array.from(cards).forEach(card => {
     card.addEventListener('mouseenter', function(e) {
       toBack(card);
@@ -200,7 +202,8 @@ function init() {
   });
 }
 
-function toBack(card) {
+function toBack(e) {
+  const card = e.children[1];
   card.classList.add('flipped');
   card.classList.add('flipping');
   setTimeout(() => {
@@ -208,7 +211,8 @@ function toBack(card) {
   }, 800);
 }
 
-function toFront(card) {
+function toFront(e) {
+  const card = e.children[1];
   const timer = setInterval(() => {
     if (!card.classList.contains('flipping')) {
       card.classList.remove('flipped');
