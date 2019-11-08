@@ -21,8 +21,9 @@ class TeamMember {
         </div>
         <div class="card-face card-back">
           <div class="bio">${this.renderBio()}</div>
-          <div class="fun-facts">${this.renderFunFacts()}
-          <span class="hashtag-funfacts">#funfact</span>
+          <div class="fun-facts">
+            ${this.renderFunFacts()}
+            <span class="hashtag-funfacts">#funfact</span>
           </div>
         </div>
       </div>

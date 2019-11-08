@@ -1,3 +1,12 @@
+.section.background-opacity.page-title,
+.background-opacity:before {
+  background-color: rgba(1, 110, 132, 0.8) !important;
+}
+
+.footer-top {
+  display: none;
+}
+
 h1,
 h2 {
   font-family: Lato;
@@ -20,7 +29,6 @@ h2 {
 
 .spacer2 {
   width: 40%;
-  /*min-width: 160px;*/
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -30,7 +38,8 @@ h2 {
   background-image: linear-gradient(cyan, #ccffff, #fff);
   background-image: linear-gradient(#286a66, #fff);
   background-image: linear-gradient(#000000e3, #ffffff);
-  background-image: linear-gradient(#000000e3, #286a66e3, #ffffffe3);
+  background-image: linear-gradient(#000000e3, rgb(1, 110, 132), #ffffffe3);
+  background-image: linear-gradient(#102a28e3, #286a66e3, #ffffffe3);
   margin: auto 20px;
   color: #ffffff;
   border-radius: 15px;
@@ -74,13 +83,16 @@ h2 {
   height: 50%;
   background: rgba(249, 155, 114, 0.8);
   background: #cc9275;
+  background: #ff6a39;
+  background: #658d1b;
+  background: #286a66;
+  background: rgba(1, 110, 132, 0.8);
   color: #fff;
   border-radius: 15px;
   align-items: center;
   justify-content: center;
   line-height: 1.5;
-  padding: 0;
-  padding-bottom: 10px;
+  padding: 15px 5px;
   justify-self: flex-end;
   position: relative;
   font-family: 'Kalam', cursive;
@@ -89,14 +101,17 @@ h2 {
 .hashtag-funfacts {
   position: absolute;
   bottom: 0px;
-  right: 10px;
-  /* top: 0px;
-  left: 10px; */
+  left: 0px;
   color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .bio .list-item {
   font-size: 15px;
+  margin: 5px 0;
 }
 
 .scene {
@@ -152,48 +167,174 @@ h2 {
   #team {
     flex-direction: column;
     width: 100%;
-    margin: 0 auto;
+    justify-content: center;
   }
 
   .team-member {
-    width: 800px;
-    height: 500px;
-    margin: 50px 5%;
-    display: flex;
+    width: 100%;
+    display: block;
     overflow: visible;
+    position: relative;
+    height: 800px;
+    margin: 20px 0;
   }
 
-  .team-member:nth-of-type(odd) {
-    flex-direction: row;
-    align-self: flex-start;
-  }
-
-  .team-member:nth-of-type(even) {
-    flex-direction: row-reverse;
-    align-self: flex-end;
+  .card {
+    width: 100%;
   }
 
   .spacer2 {
-    height: 500px;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
+  .card-back {
+    transform: unset;
+    min-height: unset;
+    height: unset;
+    max-height: 300px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0px;
+    box-shadow: unset;
+    background: #fff !important;
+    overflow: hidden;
+  }
+
+  .card-front {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 200px;
   }
 
   .card-front img {
     width: 100%;
-    max-height: 500px;
-    display: flex;
+    height: unset;
+    max-height: 400px;
+    max-width: 400px;
+    box-shadow: unset;
   }
 
-  .team-member:nth-child(even) .card-front img {
-    align-self: flex-start;
+  .card.flipped {
+    transform: unset;
   }
 
-  .card-back {
-    width: 800px;
-    height: 500px;
+  .bio {
+    min-height: 100px;
+    max-height: 220px;
   }
 
-  .team-member:nth-of-type(even) .card.flipped {
-    transform: translateX(-33%) rotateY(180deg);
+  .bio .list-item {
+    margin: 0;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .fun-facts {
+    min-height: 80px;
+    height: 80px;
+    max-height: 120px;
+  }
+
+  /* Holly Brzycki */
+  .team-member:nth-of-type(1) {
+    height: 821px;
+    margin-top: 50px;
+  }
+
+  .team-member:nth-of-type(1) .bio {
+    margin-bottom: 10px;
+  }
+
+  .team-member:nth-of-type(1) .card-back {
+    max-height: 310px;
+  }
+
+  /* Bryan Guerrisi */
+  .team-member:nth-of-type(2) {
+    height: 787px;
+  }
+
+  /* Aaron Clarke */
+  .team-member:nth-of-type(3) {
+    height: 758px;
+  }
+
+  .team-member:nth-of-type(3) .fun-facts {
+    height: 100px;
+  }
+
+  /* Kristen Gross */
+  .team-member:nth-of-type(4) {
+    height: 808px;
+  }
+
+  /* Casey Stepp */
+  .team-member:nth-of-type(5) {
+    height: 786px;
+  }
+
+  .team-member:nth-of-type(5) .fun-facts {
+    height: 100px;
+  }
+
+  /* Tammy True */
+  .team-member:nth-of-type(6) {
+    height: 783px;
+  }
+
+  /* Keisha Cree */
+  .team-member:nth-of-type(7) {
+    height: 808px;
+  }
+
+  /* Beth Cappello */
+  .team-member:nth-of-type(8) {
+    height: 866px;
+  }
+
+  .team-member:nth-of-type(8) .fun-facts {
+    height: 120px;
+  }
+
+  /* Dave Nichols */
+  .team-member:nth-of-type(9) {
+    height: 824px;
+  }
+
+  /* Andrew Rhoads */
+  .team-member:nth-of-type(10) {
+    height: 714px;
+  }
+
+  /* Aaron Sica */
+  .team-member:nth-of-type(11) {
+    height: 780px;
+  }
+
+  .team-member:nth-of-type(11) .fun-facts {
+    height: 120px;
+  }
+
+  /* Adam Shank */
+  .team-member:nth-of-type(12) {
+    height: 738px;
+  }
+
+  /* Matt Brightbill */
+  .team-member:nth-of-type(13) {
+    height: 749px;
+    margin-bottom: 50px;
+  }
+
+  .team-member:nth-of-type(13) .fun-facts {
+    height: 100px;
   }
 }
 

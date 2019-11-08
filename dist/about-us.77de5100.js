@@ -210,7 +210,7 @@ function () {
   }
 
   TeamMember.prototype.render = function () {
-    return "\n    <div class=\"team-member scene\">\n      <div class=\"spacer2\">\n        <span class=\"name\">" + this.name + "</span> \n        <span class=\"title\">" + this.title + "</span>\n      </div>\n      <div class=\"card\">\n        <div class=\"card-face card-front\">\n          " + this.renderImage() + "\n        </div>\n        <div class=\"card-face card-back\">\n          <div class=\"bio\">" + this.renderBio() + "</div>\n          <div class=\"fun-facts\">" + this.renderFunFacts() + "\n          <span class=\"hashtag-funfacts\">#funfact</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ";
+    return "\n    <div class=\"team-member scene\">\n      <div class=\"spacer2\">\n        <span class=\"name\">" + this.name + "</span> \n        <span class=\"title\">" + this.title + "</span>\n      </div>\n      <div class=\"card\">\n        <div class=\"card-face card-front\">\n          " + this.renderImage() + "\n        </div>\n        <div class=\"card-face card-back\">\n          <div class=\"bio\">" + this.renderBio() + "</div>\n          <div class=\"fun-facts\">\n            " + this.renderFunFacts() + "\n            <span class=\"hashtag-funfacts\">#funfact</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ";
   };
 
   TeamMember.prototype.renderBio = function () {
@@ -385,7 +385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55504" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56620" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
