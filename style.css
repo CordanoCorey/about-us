@@ -12,7 +12,8 @@ h2 {
   font-family: Lato;
 }
 
-#team {
+.team,
+.supervisor {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -163,8 +164,22 @@ h2 {
   overflow: hidden;
 }
 
+#help-desk {
+  font-size: 42px;
+  color: #49575f;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 80px 0 7px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
-  #team {
+  .team,
+  .supervisor {
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -243,97 +258,97 @@ h2 {
   }
 
   /* Holly Brzycki */
-  .team-member:nth-of-type(1) {
+  .team-member.holly-brzycki {
     height: 821px;
     margin-top: 50px;
   }
 
-  .team-member:nth-of-type(1) .bio {
+  .team-member.holly-brzycki .bio {
     margin-bottom: 10px;
   }
 
-  .team-member:nth-of-type(1) .card-back {
+  .team-member.holly-brzycki .card-back {
     max-height: 310px;
   }
 
   /* Bryan Guerrisi */
-  .team-member:nth-of-type(2) {
+  .team-member.bryan-guerrisi {
     height: 787px;
   }
 
   /* Aaron Clarke */
-  .team-member:nth-of-type(3) {
+  .team-member.aaron-clarke {
     height: 758px;
   }
 
-  .team-member:nth-of-type(3) .fun-facts {
+  .team-member.aaron-clarke .fun-facts {
     height: 100px;
   }
 
   /* Kristen Gross */
-  .team-member:nth-of-type(4) {
+  .team-member.kristen-gross {
     height: 808px;
   }
 
   /* Casey Stepp */
-  .team-member:nth-of-type(5) {
+  .team-member.casey-stepp {
     height: 786px;
   }
 
-  .team-member:nth-of-type(5) .fun-facts {
+  .team-member.casey-stepp .fun-facts {
     height: 100px;
   }
 
   /* Tammy True */
-  .team-member:nth-of-type(6) {
+  .team-member.tammy-true {
     height: 783px;
   }
 
   /* Keisha Cree */
-  .team-member:nth-of-type(7) {
+  .team-member.keisha-cree {
     height: 808px;
   }
 
   /* Beth Cappello */
-  .team-member:nth-of-type(8) {
+  .team-member.beth-cappello {
     height: 866px;
   }
 
-  .team-member:nth-of-type(8) .fun-facts {
+  .team-member.beth-cappello .fun-facts {
     height: 120px;
   }
 
   /* Dave Nichols */
-  .team-member:nth-of-type(9) {
+  .team-member.dave-nichols {
     height: 824px;
   }
 
   /* Andrew Rhoads */
-  .team-member:nth-of-type(10) {
+  .team-member.andrew-rhoads {
     height: 714px;
   }
 
   /* Aaron Sica */
-  .team-member:nth-of-type(11) {
+  .team-member.aaron-sica {
     height: 780px;
+    margin-bottom: 100px;
   }
 
-  .team-member:nth-of-type(11) .fun-facts {
+  .team-member.aaron-sica .fun-facts {
     height: 120px;
   }
 
   /* Adam Shank */
-  .team-member:nth-of-type(12) {
+  .team-member.adam-shank {
     height: 738px;
   }
 
   /* Matt Brightbill */
-  .team-member:nth-of-type(13) {
+  .team-member.matthew-brightbill {
     height: 749px;
-    margin-bottom: 50px;
   }
 
-  .team-member:nth-of-type(13) .fun-facts {
+  .team-member.matthew-brightbill .fun-facts {
     height: 100px;
   }
 }
